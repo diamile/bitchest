@@ -15,6 +15,9 @@ class CreateCryptoHystoriesTable extends Migration
     {
         Schema::create('crypto_hystories', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('crypto-id');
+            $table->datetime('date');
+            $table->decimal('rate',7,2);
             $table->timestamps();
         });
     }
