@@ -15,6 +15,9 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->dateTime('buy_date');
+            $table->dateTime('sell_date');
+            $table->decimal('quantity', 7, 2);
             $table->timestamps();
         });
     }
